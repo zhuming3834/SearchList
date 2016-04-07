@@ -15,6 +15,9 @@
 		10BE1EAC1CB5E863004DD642 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10BE1EAA1CB5E863004DD642 /* LaunchScreen.storyboard */; };
 		10BE1EB71CB5E863004DD642 /* SearchListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BE1EB61CB5E863004DD642 /* SearchListTests.m */; };
 		10BE1EC21CB5E863004DD642 /* SearchListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BE1EC11CB5E863004DD642 /* SearchListUITests.m */; };
+		10BE1EE11CB5E8D3004DD642 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BE1EE01CB5E8D3004DD642 /* libsqlite3.tbd */; };
+		10BE1EE41CB60E2C004DD642 /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BE1EE31CB60E2C004DD642 /* SearchModel.m */; };
+		10BE1EE71CB610A6004DD642 /* SearchDBManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BE1EE61CB610A6004DD642 /* SearchDBManage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		10BE1EBD1CB5E863004DD642 /* SearchListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SearchListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10BE1EC11CB5E863004DD642 /* SearchListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchListUITests.m; sourceTree = "<group>"; };
 		10BE1EC31CB5E863004DD642 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10BE1EE01CB5E8D3004DD642 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		10BE1EE21CB60E2C004DD642 /* SearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModel.h; sourceTree = "<group>"; };
+		10BE1EE31CB60E2C004DD642 /* SearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModel.m; sourceTree = "<group>"; };
+		10BE1EE51CB610A6004DD642 /* SearchDBManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchDBManage.h; sourceTree = "<group>"; };
+		10BE1EE61CB610A6004DD642 /* SearchDBManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchDBManage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10BE1EE11CB5E8D3004DD642 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,7 @@
 		10BE1E901CB5E863004DD642 = {
 			isa = PBXGroup;
 			children = (
+				10BE1EE01CB5E8D3004DD642 /* libsqlite3.tbd */,
 				10BE1E9B1CB5E863004DD642 /* SearchList */,
 				10BE1EB51CB5E863004DD642 /* SearchListTests */,
 				10BE1EC01CB5E863004DD642 /* SearchListUITests */,
@@ -105,6 +115,10 @@
 				10BE1EA01CB5E863004DD642 /* AppDelegate.m */,
 				10BE1EA21CB5E863004DD642 /* ViewController.h */,
 				10BE1EA31CB5E863004DD642 /* ViewController.m */,
+				10BE1EE21CB60E2C004DD642 /* SearchModel.h */,
+				10BE1EE31CB60E2C004DD642 /* SearchModel.m */,
+				10BE1EE51CB610A6004DD642 /* SearchDBManage.h */,
+				10BE1EE61CB610A6004DD642 /* SearchDBManage.m */,
 				10BE1EA51CB5E863004DD642 /* Main.storyboard */,
 				10BE1EA81CB5E863004DD642 /* Assets.xcassets */,
 				10BE1EAA1CB5E863004DD642 /* LaunchScreen.storyboard */,
@@ -272,7 +286,9 @@
 			files = (
 				10BE1EA41CB5E863004DD642 /* ViewController.m in Sources */,
 				10BE1EA11CB5E863004DD642 /* AppDelegate.m in Sources */,
+				10BE1EE71CB610A6004DD642 /* SearchDBManage.m in Sources */,
 				10BE1E9E1CB5E863004DD642 /* main.m in Sources */,
+				10BE1EE41CB60E2C004DD642 /* SearchModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SearchList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhuming.SearchList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SearchList/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zhuming.SearchList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
